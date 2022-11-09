@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 999;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background-color: rgb(251, 255, 0);
+}
+.navbar .lg :hover {
+  color: yellow;
+}
+.navbar .lg :hover span {
+  color: black;
+}
+.navbar.sticky .lg :hover {
+  color: crimson;
+}
+.navbar.sticky .lg :hover span {
+  color: black;
+}
+.navbar .lg a {
+  font-size: 45px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.navbar .lg a span {
+  color: yellow;
+}
+.navbar.sticky .lg a span {
+  color: crimson;
+}
+.navbar .menu li a {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 550;
+  margin-left: 25px;
+  transform: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: crimson;
+}
+.navbar.sticky .menu li a:hover {
+  color: crimson;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .maxwidth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.maxwidth {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: yellow;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #111;
+  z-index: 9999;
+  font-size: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+.navbar.sticky .menu-button i:hover {
+  color: red;
+}
+.bars{
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.home {
+  display: flex;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url(./Source/PicsAr.jpg) no-repeat center;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  color: black;
+  min-width: 500px;
+}
+.home .maxwidth {
+  margin: auto 0 auto 40px;
+}
+.home .home-contact .line-1 {
+  font-size: 25px;
+}
+.home .home-contact .line-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-contact .line-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-contact a {
+  display: inline-block;
+  background: yellow;
+  color: black;
+  padding: 12px 35px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-size: 25px;
+  border: 1px solid yellow;
+  transition: all 0.5s ease;
+}
+.home .home-contact a:hover {
+  color: yellow;
+  background: none;
+}
+section {
+  padding: 100px 0;
+}
+.about,
+.education,
+.skills,
+.contact,
+footer {
+  font-family: "poppins", "sans-serif";
+}
+.about .title,
+.education .title,
+.skills .title,
+.contact .title {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  font-family: "ubuntu", "sans-serif";
+}
+.about .title::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background: black;
+}
+.about .title::after {
+  content: "who i am";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  font-size: 20px;
+  padding: 5px 7px;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 10px;
+  color: crimson;
+}
+.about .about-me .clm-lft img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.about .about-me .clm-lft {
+  width: 45%;
+}
+.about .about-me .clm-rgt {
+  width: 55%;
+}
+.about .about-me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-me .clm-rgt .txt {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about .about-me .clm-rgt .txt span {
+  color: crimson;
+}
+.about .about-me .clm-rgt p {
+  text-align: justify;
+}
+.about .about-me .clm-rgt a {
+  display: inline-block;
+  background: yellow;
+  color: black;
+  padding: 5px 25px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid yellow;
+  transition: all 0.3s ease;
+}
+.about .about-me .clm-rgt a:hover {
+  color: crimson;
+  background: none;
+  border: 1px solid crimson;
+}
+.education .title::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background: white;
+}
+.education .title::after {
+  content: "what i provide";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  font-size: 20px;
+  padding: 5px 7px;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 10px;
+  color: crimson;
+  background: black;
+}
+.education {
+  background: black;
+  color: white;
+}
+.education .my-education .card {
+  width: 50%;
+  text-align: center;
+  font-weight: 500;
+  background: #333;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin: 0 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.education .my-education .card .box {
+  transition: all 0.5s ease;
+}
+.education .my-education .card .box:hover {
+  transform: scale(1.05);
+}
+.education .my-education {
+  display: flex;
+}
+.education .my-education .card i {
+  font-size: 50px;
+  color: crimson;
+}
+.education .my-education .card .txt {
+  font-size: 25px;
+  margin: 10px 0 7px 0;
+  font-weight: 600;
+}
+.education .my-education .card h6 {
+  margin-top: 5px;
+}
+.education .my-education .card span {
+  color: crimson;
+}
+.skills .title::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background: black;
+}
+.skills .title::after {
+  content: "what i know";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  font-size: 20px;
+  padding: 5px 7px;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 10px;
+  color: crimson;
+}
+.skills-content .columns .lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills-content .txt {
+  background: yellow;
+  padding: 30px;
+  border: 1px black solid;
+  box-shadow: 5px 7px 10px -5px;
+  transition: all 0.5s ease;
+}
+.skills-content .txt:hover {
+  background-color: white;
+  padding: 31px;
+}
+.skills-content .txt:hover ul {
+  color: crimson;
+}
+.skills-content .txt:hover p {
+  color: crimson;
+}
+.skills-content .txt .coding-skills {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 150px;
+}
+.skills-content .txt .coding-per {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 150px;
+}
+.skills-content .txt .coding-skills li {
+  margin: 7px 0px;
+}
+.skills-content .txt .coding-per p {
+  margin: 7px 0px;
+}
+.skills-content .txt .coding-skills span {
+  margin: 0px 40px;
+}
+
+.contact .title::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 4px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background: black;
+}
+.contact .title::after {
+  content: "get in touch";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  font-size: 20px;
+  padding: 5px 7px;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 10px;
+  color: crimson;
+}
+.contact .contact-content .column .text {
+  font-weight: 600;
+  font-size: 18px;
+}
+.contact .contact-content .column .icons {
+  margin: 10px 0px;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+  margin: 18px 0;
+}
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: crimson;
+}
+.contact .contact-content .info .head {
+  font-weight: 500;
+}
+.contact .contact-content .info .subtitle {
+  color: #333;
+}
+.contact .contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin: 7.5px 0;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .Email {
+  margin-left: 10px;
+}
+.contact .right form .textarea {
+  height: 80px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 2px solid crimson;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "poppins", "sans-serif";
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+  margin-top: 7.5px;
+}
+.contact .right form .button {
+  height: 50px;
+  width: 150px;
+  margin-top: 20px;
+}
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: 2px solid crimson;
+  background: crimson;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+  color: crimson;
+  background: none;
+}
+.contact .right form .button a{
+  color: white;
+}
+.contact .right form .button button:hover a{
+  color: crimson;
+}
+footer {
+  background: #111;
+  padding: 20px 25px;
+  color: white;
+}
+footer span a {
+  color: yellow;
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+
+.home .home-contact .line-3 span {
+  color: rgb(255, 255, 0);
+  font-weight: 500;
+}
+.home .home-contact .line-1 span {
+  color: yellow;
+}
+
+/* responsive media query */
+@media (max-width: 1300px) {
+  .home .maxwidth {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1088px) {
+  .about .about-me .clm-lft img {
+    width: 300px;
+    height: 300px;
+  }
+  .education .my-education .card .txt {
+    font-size: 22px;
+    margin: 10px 0 7px 0;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+  .maxwidth {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 964px) {
+  .menu-button {
+    display: block;
+    z-index: 999;
+  }
+  .menu-button i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    background: yellow;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 50px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .home .home-contact .line-2 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+  .home .home-contact .line-3 {
+    font-size: 30px;
+  }
+  .home .home-contact a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+  .about .about-me .clm-lft,
+  .clm-rgt {
+    width: 50%;
+  }
+  .about .about-me .clm-rgt {
+    flex: 100%;
+  }
+  .about .about-me .clm-lft {
+    display: flex;
+    margin: 0 auto 60px;
+    justify-content: center;
+  }
+  .education .my-education .card {
+    width: 50%;
+    text-align: center;
+    font-weight: 400;
+    background: #333;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .skills-content .txt {
+    padding: 15px;
+  }
+  .skills-content .txt .coding-skills {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 100px;
+  }
+  .skills-content .txt .coding-per {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 100px;
+  }
+  .skills-content .txt:hover {
+    padding: 16px;
+  }
+  .contact .contact-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    align-items: flex-start;
+  }
+  .menu-button .bars{
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+  }
+  .menu-button i:hover {
+    color: crimson;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .maxwidth {
+    padding: 0 23px;
+  }
+  .home .home-contact .line-2 {
+    font-size: 50px;
+  }
+  .home .home-contact .line-3 {
+    font-size: 25px;
+  }
+  .home .home-contact a {
+    font-size: 18px;
+    padding: 6px 15px;
+  }
+  .maxwidth {
+    max-width: 800px;
+  }
+  .about .about-me .clm-rgt {
+    flex: 100%;
+  }
+  .about .about-me .clm-lft {
+    display: flex;
+    margin: 0 auto 60px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 690px) {
+  .maxwidth {
+    padding: 0 23px;
+  }
+  .home .home-contact .line-2 {
+    font-size: 50px;
+  }
+  .home .home-contact .line-3 {
+    font-size: 25px;
+  }
+  .home .home-contact a {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+  .education .my-education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .education .my-education .card {
+    margin: 20px;
+    width: 100%;
+  }
+  .skills-content .txt {
+    padding: 10px;
+  }
+  .skills-content .txt .coding-skills {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 100px;
+  }
+  .skills-content .txt .coding-per {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 100px;
+  }
+}
